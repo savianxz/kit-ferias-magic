@@ -1240,6 +1240,7 @@ function Pricing() {
     badge?: string;
     bestValue?: boolean;
     featured: boolean;
+    href: string;
   }
 
   const plans: Plan[] = [
@@ -1255,6 +1256,7 @@ function Pricing() {
       ],
       cta: "Começar Agora",
       featured: false,
+      href: "https://pay.cakto.com.br/43y3d9m_952939",
     },
     {
       name: "Plano Família",
@@ -1271,6 +1273,7 @@ function Pricing() {
       badge: "⭐ O MAIS ESCOLHIDO PELAS MÃES",
       bestValue: true,
       featured: true,
+      href: "https://pay.cakto.com.br/3bsurs2",
     },
     {
       name: "Plano Premium",
@@ -1286,6 +1289,7 @@ function Pricing() {
       cta: "Quero o completo",
       badge: "👑 COMPLETO",
       featured: false,
+      href: "#",
     },
   ];
   return (
@@ -1374,7 +1378,7 @@ function Pricing() {
                   ))}
                 </ul>
                 <a
-                  href="#"
+                  href={plan.href}
                   className={
                     "inline-flex w-full items-center " +
                     "justify-center gap-2 rounded-full px-6 " +
